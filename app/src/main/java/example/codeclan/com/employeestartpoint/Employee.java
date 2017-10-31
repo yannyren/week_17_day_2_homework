@@ -26,7 +26,11 @@ public class Employee {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if( name == null || name == "" ) {
+            System.out.println("Name cannot be null or empty");
+        } else {
+            this.name = name;
+        }
     }
 
     public double getSalary() {
@@ -38,7 +42,12 @@ public class Employee {
     }
 
     public void raiseSalary(double increasedAmount) {
-        this.salary += increasedAmount;
+        if(increasedAmount < 0) {
+            System.out.println("Negative number has been put");
+        } else {
+            this.salary += increasedAmount;
+        }
     }
+
 
 }

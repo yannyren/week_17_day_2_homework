@@ -35,9 +35,28 @@ public class EmployeeTest {
     }
 
     @Test
+    public void setNameCanNotBeNull() {
+        employee.setName(null);
+        assertEquals("Wilma", employee.getName());
+    }
+
+    @Test
+    public void setNameCanNotBeEmpty() {
+        employee.setName("");
+        assertEquals("Wilma", employee.getName());
+    }
+
+    @Test
     public void testRaiseSalary() {
         employee.raiseSalary(3000.00);
         assertEquals(33000.00, this.employee.getSalary(), 0.01);
     }
+
+    @Test
+    public void NegativeValueForRaiseSalary() {
+        employee.raiseSalary(-1000.00);
+        assertEquals(30000.00, this.employee.getSalary(), 0.01);
+    }
+
 
 }
