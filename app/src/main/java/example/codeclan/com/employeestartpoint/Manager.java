@@ -5,7 +5,7 @@ package example.codeclan.com.employeestartpoint;
  */
 
 public class Manager extends Employee {
-    String deptName;
+    private String deptName;
 //    int id;
 //    String name;
 //    String socialSecurityNumber;

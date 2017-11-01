@@ -5,7 +5,7 @@ package example.codeclan.com.employeestartpoint;
  */
 
 public class Director extends Manager {
-    double budget;
+    private double budget;
 
     public Director(int id, String name, String socialSecurityNumber, double salary, String deptName, double budget) {
         super(id, name, socialSecurityNumber, salary, deptName);
